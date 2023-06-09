@@ -1,7 +1,145 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML>
 <html>
-<body>
-<h1>GeoMatch</h1>
-<p></p>
-</body>
+    <head>
+        <title>GeoMatch</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://use.typekit.net/quv7bsd.css"> <!-- fonts -->
+        <link rel="stylesheet" href="flickity.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+        <script src="flickity.pkgd.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <!-- Note: add back google analytics! -->
+    </head>
+    <body id="body">
+        <div id="main"> 
+            <header id="header"></header>
+            <!-- style="padding-bottom:1em" -->
+            <div id="profile" style="padding-top: 0px; margin-top: 0px; padding-bottom: 0px;margin-bottom: 0px">
+                <!-- <img src="images/profile.jpg"> -->
+                <div id="profile-desc" style="padding-top: 0px; margin-top: 0px; padding-bottom: 0px;margin-bottom: 0px">
+                    <div id="profile-name" style="padding-top: 0px; margin-top: 0px; padding-bottom: 0px;margin-bottom: 0px">Geometry Matching for Multi-Embodiment Grasping</div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+
+            <div class="container" id="main" style="padding-top: 0px; margin-top: 0px">        
+                <div class="row" style="padding-top: 0px; margin-top: 0px">
+                    <div class="col-md-12 text-center" style="padding-top: 0px; margin-top: 0px">
+                        <ul class="list-inline" style="padding-top: 0px; margin-top: 0px">
+                        <br>
+                        <li><a href=""></a>CoRL 2023 - Anonymous submission</li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li></li>
+                        <br>
+                        <li><a href=""></a></li>
+                        <li></li>
+                        <li></li>
+                        <li><a href=""></a></li>
+                        <br>
+                            <!-- <a href="http://g.co/robotics">
+                                <image src="images/robotics-at-google.png" height="40px" style="position: relative; top: 50%; transform: translateY(30%);"> 
+                                <span>Robotics at Google</span>
+                            </a> -->
+                        </ul>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center">
+            <div class="col-md-2 text-center">
+                <a href="https://arxiv.org/abs/2210.06407">
+                <image src="images/paper.png" height="60px">
+                <!-- <image src="img/new.png" height="20px" class="imtip"> -->
+                <h4 style="padding-bottom: 7px"><strong>Paper</strong></h4>
+                </a>
+            </div>
+            <!-- <div class="col-md-2 text-center">
+                <a href="" target="_blank">
+                <image src="images/youtube_icon.png" height="60px">
+                <image src="img/new.png" height="20px" class="imtip">
+                <h4 style="padding-bottom: 7px"><strong>Video</strong></h4>
+                </a>
+            </div> -->
+            <div class="col-md-2 text-center">
+                <a href="" target="_blank">
+                <image src="images/github.png" height="60px">
+                <!-- <image src="img/new.png" height="20px" class="imtip"> -->
+                <h4 style="padding-bottom: 7px"><strong>Code (Coming soon!) </strong></h4>
+                </a>
+            </div>
+            <!-- <li>
+                        <a href="https://youtu.be/ysFav0b472w">
+                        <image src="img/youtube_icon.png" height="60px">
+                            <h4><strong>Video</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ai.googleblog.com/2022/08/towards-helpful-robots-grounding.html">
+                        <image src="img/google-ai-blog-small.png" height="60px">
+                            <image src="img/new.png" height="20px" class="imtip">
+                            <h4><strong>Blogpost</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://sites.research.google/palm-saycan">
+                        <image src="img/demo.png" height="60px">
+                            <image src="img/new.png" height="20px" class="imtip">
+                            <h4><strong>Demo</strong></h4>
+                        </a>
+                    </li>  -->
+            </div>
+
+            <!-- Simple, centered version -->            
+
+            <div class="section abstract">
+            <h2 style="padding-top: 10px; margin-top: 10px"><b>Abstract</b></h2>
+            <p> While significant progress has been made on the problem of generating grasps, many existing learning-based approaches still 
+                concentrate on a single embodiment, provide limited generalization to higher DoF end-effectors and cannot capture a diverse set 
+                of grasp modes. In this paper, we tackle the problem of grasping multi-embodiments through the viewpoint of learning 
+                rich geometric representations for both objects and end-effectors using Graph Neural Networks (GNN). Our novel method - GeoMatch - applies 
+                supervised learning on grasping data from multiple embodiments, learning end-to-end contact point likelihood maps as well as conditional 
+                autoregressive prediction of grasps keypoint-by-keypoint. We compare our method against 3 baselines that provide multi-embodiment support. 
+                Our approach performs better across 3 end-effectors, while also providing competitive diversity of grasps. 
+                Examples can be found at <a href="geo-match.github.io"></a>.</p>
+            </div>
+
+
+            <div class="section paper">
+            <h2 style="margin-bottom: 20px;"><b>Example grasps: </b></h2>
+                <p style="margin-bottom: 20px; margin-left: 30px">We train our method on a large number of diverse grasps spanning among 38 household objects and 5 different end-effectos: 2-finger, 3-finger, 4-finger, and 5-finger.</p>
+                <div class="section recent-work">
+                    <div class="highlight-proj" style="height: 310px;">
+                        <p style="font-size: 18px; margin-top: 5px; margin-bottom: 5px; margin-left: 0px; font-family: roboto, sans-serif;"><i>(1 training example)</i></p>
+                        <img src="images/qual_results.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section paper">
+            <h2 style="margin-bottom: 20px;"><b>GeoMatch: Method</b></h2>
+                <p style="margin-bottom: 20px; margin-left: 30px">We propose a learning-based method that leverages GNN as generalized geometry encoders of objects and end-effectors and further predicts contacts for grasping in an autoregressive manner.
+                <br>
+                <br>
+                <i>Our method architecture is the following: </i>
+                </p>
+                <div class="highlight-proj" style="height: 420px">
+                    <img style="width: 70%" src="images/arch_new.png">
+                </div>
+                <div class="highlight-proj" style="height: 420px">
+                    <center><img style="width: 30%" src="images/ar_modules_new.png"></center>
+                </div>
+            </div>
+
+            
+            <br><br><br><br><br><br><br><br><br><br>
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <script src="sync.js"></script>
+    </body>
 </html>
