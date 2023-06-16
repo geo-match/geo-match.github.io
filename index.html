@@ -135,6 +135,12 @@
                         <img style="width: 100%" src="images/ar_modules_new.png">
                     </div>
                 </div>
+                <p style="margin-bottom: 30px; margin-left: 30px">Point clouds of an object and end-effector are converted to graphs and passed through GNN 
+                    encoders to obtain geometry embeddings that represent local geometry. The end-effector embeddings for a set of user selected keypoints 
+                    are gathered and along with the object embedding, are used for contact prediction. This happens through an autoregressive setup where 
+                    teacher forcing is applied to predict one keypoint at a time while also learning an independent distribution of object vertex to end-effector 
+                    vertex contacts as an auxiliary task. Each autoregressive module is an MLP that operates on the difference map of all object points with 
+                    the previous keypoint contact vertex, the end-effector keypoint embedding of the keypoint to be predicted, and the object embedding.  
             </div>
 
             
